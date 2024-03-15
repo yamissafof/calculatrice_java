@@ -24,7 +24,7 @@ public class Calculatrice {
 				}
 				
 				System.out.println("Votre résultat est " + Res);
-				Op = Saisie.lire_String("Quel est l'opérateur suivant ? Ou faites F pour quitter.");
+				Op = Saisie.lire_String("Quel est l'opérateur suivant ? F pour quitter ou C pour recommencer avec un nouveau nombre.");
 			}
 		}
 		System.out.println("Fin des calculs");
