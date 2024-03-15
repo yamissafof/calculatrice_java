@@ -21,6 +21,7 @@ public class Calculatrice {
 				else if (Op.equals("/")) {
 					if (Nb != 0) Res /= Nb;
 					else System.out.println("Erreur : division par zéro !");
+						 Res = 0;
 				}
 				
 				System.out.println("Votre résultat est " + Res);
