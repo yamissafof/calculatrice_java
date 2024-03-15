@@ -8,22 +8,25 @@ public class Calculatrice {
 		
 		Op = "";
 		
-		while (Op.equals("F") == false ) {
+		while (!Op.equals("F")) {
 			Res = Saisie.lire_int("Quel est le premier nombre ? ");
 			Op = Saisie.lire_String("Quel est votre opérateur ? ");
 			
-			while ((Op.equals("F") == false) && (Op.equals("C") == false)) {
+			while (!Op.equals("F") && !Op.equals("C")) {
 				Nb = Saisie.lire_int("Quel est votre deuxième nombre ? ");
 				
-				if (Op.equals("+")) Res = Res = Res + Nb;
-				else { if (Op.equals("-")) Res = Res - Nb; else if (Op.equals("*")) Res = Res * Nb;}
+				if (Op.equals("+")) Res += Nb;
+				else if (Op.equals("-")) Res -= Nb;
+				else if (Op.equals("*")) Res *= Nb;
+				else if (Op.equals("/")) {
+					if (Nb != 0) Res /= Nb;
+					else System.out.println("Erreur : division par zéro !");
+				}
 				
-				System.out.println("Votre résultat est "+Res);
-				Op = Saisie.lire_String("Quel est l'opérateur suivant ? ");
+				System.out.println("Votre résultat est " + Res);
+				Op = Saisie.lire_String("Quel est l'opérateur suivant ? Ou faites F pour quitter.");
 			}
 		}
-		System.out.println("Fin dse calculs");
-
+		System.out.println("Fin des calculs");
 	}
-
 }
