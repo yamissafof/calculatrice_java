@@ -18,11 +18,6 @@ public class Calculatrice {
 				if (Op.equals("+")) Res += Nb;
 				else if (Op.equals("-")) Res -= Nb;
 				else if (Op.equals("*")) Res *= Nb;
-				else if (Op.equals("/")) {
-					if (Nb != 0) Res /= Nb;
-					else System.out.println("Erreur : division par zéro !");
-						 Res = 0;
-				}
 				
 				System.out.println("Votre résultat est " + Res);
 				Op = Saisie.lire_String("Quel est l'opérateur suivant ? F pour quitter ou C pour recommencer avec un nouveau nombre.");
